@@ -13,7 +13,11 @@ debug() {
 bench() {
   debug "$@"
   release "$@"
-  hyperfine --warmup 3 --shell=none ./"$2"_debug ./"$2"_release | tee "$2"/results.txt
+  hyperfine --warmup 10 --shell=none ./"$2"_debug ./"$2"_release
+}
+
+clean() {
+  rm "$2"_release "$2"_debug
 }
 
 if [[ "$1" == "r" ]]; then
@@ -26,4 +30,8 @@ fi
 
 if [[ "$1" == "b" ]]; then
   bench "$@"
+fi
+
+if [[ "$1" == "c" ]]; then
+  clean "$@"
 fi
