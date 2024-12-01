@@ -1,0 +1,11 @@
+Benchmark 1: ./day_1_debug
+  Time (mean ± σ):       7.1 ms ±   0.1 ms    [User: 4.5 ms, System: 2.1 ms]
+  Range (min … max):     6.9 ms …   7.8 ms    419 runs
+ 
+Benchmark 2: ./day_1_release
+  Time (mean ± σ):       4.4 ms ±   0.0 ms    [User: 1.8 ms, System: 2.1 ms]
+  Range (min … max):     4.3 ms …   5.1 ms    682 runs
+ 
+Summary
+  ./day_1_release ran
+    1.61 ± 0.03 times faster than ./day_1_debug
